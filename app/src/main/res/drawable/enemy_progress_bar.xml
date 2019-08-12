@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportHeight="12"
+            android:viewportWidth="133">
+            <path
+                android:fillColor="#33FFFFFF"
+                android:pathData="M0,8C0,9.105 0.895,10 2,10H132V0L1.909,5.913C0.841,5.962 0,6.842 0,7.911V8Z"
+                android:strokeAlpha="0.2" />
+        </vector>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip
+            android:clipOrientation="horizontal"
+            android:gravity="left">
+            <vector xmlns:android="http://schemas.android.com/apk/res/android"
+                android:width="24dp"
+                android:height="24dp"
+                android:viewportHeight="12"
+                android:viewportWidth="133">
+                <path
+                    android:fillColor="#ffffff"
+                    android:pathData="M0,8C0,9.105 0.895,10 2,10H132V0L1.909,5.913C0.841,5.962 0,6.842 0,7.911V8Z"
+                    android:strokeAlpha="0.2" />
+            </vector>
+        </clip>
+    </item>
+</layer-list>

@@ -5,4 +5,10 @@
     <color name="colorAccent">#D81B60</color>
     <color name="bright_black">#171717</color>
     <color name="transparent_white">#13FFFFFF</color>
+    <color name="blink_white">#4DFFFFFF</color>
+    <color name="primaryYellow">#FFEB3B</color>
+    <color name="accentWhite">#FFFFFF</color>
+    <color name="primaryDarkYellow">#40FFEB3B</color>
+    <color name="black">#000000</color>
+    <color name="primaryGreen">#26680F</color>
 </resources>

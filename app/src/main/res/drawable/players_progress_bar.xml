@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportHeight="12"
+            android:viewportWidth="133">
+            <path
+                android:fillColor="#33F4D600"
+                android:pathData="M132,8C132,9.105 131.105,10 130,10H0V0L130.091,5.913C131.159,5.962 132,6.842 132,7.911V8Z"
+                android:strokeAlpha="0.2" />
+        </vector>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip
+            android:clipOrientation="horizontal"
+            android:gravity="right">
+            <vector xmlns:android="http://schemas.android.com/apk/res/android"
+                android:width="24dp"
+                android:height="24dp"
+                android:viewportHeight="12"
+                android:viewportWidth="133">
+                <path
+                    android:fillColor="#FFEB3B"
+                    android:pathData="M132,8C132,9.105 131.105,10 130,10H0V0L130.091,5.913C131.159,5.962 132,6.842 132,7.911V8Z" />
+            </vector>
+        </clip>
+    </item>
+</layer-list>

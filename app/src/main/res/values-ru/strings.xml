@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TestTaskLabmedia</string>
+    <string name="raund">Раунд</string>
+    <string name="answer">Ответ</string>
+    <string name="attack">Атакую</string>
+    <string name="enemy_nick">Никнейм противника</string>
+    <string name="question">Вопрос</string>
+    <string name="damage">Урон</string>
+</resources>
