@@ -35,6 +35,7 @@ public class QuestionListActivity extends AppCompatActivity {
     }
 
     public void adapterListReload() {
+        adapter.clearItems();
         adapter.setItems(QuestionDB.getInstance(this).getQuestionDAO().getAll());
     }
 
