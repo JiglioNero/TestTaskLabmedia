@@ -20,6 +20,7 @@ public class AnswerCardFragment extends Fragment {
 
     private boolean isAnswer;
     private boolean isBlocked;
+    private boolean enemyTurn;
     private String text;
 
     private ConstraintLayout button;
@@ -48,6 +49,7 @@ public class AnswerCardFragment extends Fragment {
             isAnswer = getArguments().getBoolean(IS_ANSWER);
             text = getArguments().getString(TEXT);
             isBlocked = false;
+            enemyTurn = false;
         }
     }
 
@@ -65,12 +67,19 @@ public class AnswerCardFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (!isBlocked) {
-                    playerIndicator.setVisibility(View.VISIBLE);
+                    if (enemyTurn) {
+                        enemyIndicator.setVisibility(View.VISIBLE);
 
-                    if (!isAnswer) {
-                        button.setForeground(getResources().getDrawable(R.drawable.blink_white, null));
+                        button.setForeground(getResources().getDrawable(R.drawable.white_stroke, null));
+                    } else {
+                        playerIndicator.setVisibility(View.VISIBLE);
+
+                        if (!isAnswer) {
+                            button.setForeground(getResources().getDrawable(R.drawable.blink_white, null));
+                        } else {
+                            button.setForeground(getResources().getDrawable(R.drawable.blink_green, null));
+                        }
                     }
-
                     Bundle res = new Bundle();
                     res.putBoolean(IS_ANSWER, isAnswer);
                     mListener.onFragmentInteraction(res);
@@ -91,9 +100,17 @@ public class AnswerCardFragment extends Fragment {
 
     public void endOfSelect() {
         if (isAnswer) {
-            button.setBackgroundResource(R.drawable.border_radius_all_15_green);
+            button.setForeground(getResources().getDrawable(R.drawable.blink_green, null));
         }
         isBlocked = true;
+    }
+
+    public boolean isEnemyTurn() {
+        return enemyTurn;
+    }
+
+    public void setEnemyTurn(boolean enemyTurn) {
+        this.enemyTurn = enemyTurn;
     }
 
     @Override

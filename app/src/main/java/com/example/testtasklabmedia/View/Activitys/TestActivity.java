@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -24,6 +25,8 @@ public class TestActivity extends AppCompatActivity implements AnswerCardFragmen
 
     private Question question;
     private List<Answer> answers;
+
+    private boolean isEnemyTurn = false;
 
     private ArrayList<AnswerCardFragment> answerCardFragmentArrayList;
 
@@ -74,13 +77,23 @@ public class TestActivity extends AppCompatActivity implements AnswerCardFragmen
             transaction.add(R.id.list_answers, f, f.getTag());
         }
         transaction.commit();
+
+        Toast.makeText(this, getString(R.string.player_turn), Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onFragmentInteraction(Bundle bundle) {
         boolean isTrue = bundle.getBoolean(AnswerCardFragment.IS_ANSWER);
-        for (AnswerCardFragment f : answerCardFragmentArrayList) {
-            f.endOfSelect();
+        if (isEnemyTurn) {
+            for (AnswerCardFragment f : answerCardFragmentArrayList) {
+                f.endOfSelect();
+            }
+        } else {
+            isEnemyTurn = true;
+            for (AnswerCardFragment f : answerCardFragmentArrayList) {
+                f.setEnemyTurn(isEnemyTurn);
+            }
+            Toast.makeText(this, getString(R.string.enemy_turn), Toast.LENGTH_SHORT).show();
         }
     }
 }

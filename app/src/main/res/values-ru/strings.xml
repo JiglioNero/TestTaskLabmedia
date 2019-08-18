@@ -7,4 +7,6 @@
     <string name="enemy_nick">Никнейм противника</string>
     <string name="question">Вопрос</string>
     <string name="damage">Урон</string>
+    <string name="enemy_turn">Ход противника</string>
+    <string name="player_turn">Твой ход</string>
 </resources>

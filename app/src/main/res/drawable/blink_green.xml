@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:drawable="@drawable/border_radius_all_15">
-    <target
-        android:animation="@animator/green_blink"
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="15dp" />
+    <solid
+        android:color="@color/primaryGreen"
         android:name="solid_card" />
-</animated-vector>
+</shape>

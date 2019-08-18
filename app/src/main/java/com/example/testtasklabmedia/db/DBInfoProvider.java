@@ -12,7 +12,7 @@ public class DBInfoProvider {
         questions.add(new Question(100, "Ответ 1", "Вопрос 1"));
         questions.add(new Question(200, "Ответ 2", "Вопрос 2"));
         questions.add(new Question(300, "Ответ 3", "Вопрос 3"));
-
+        questions.add(new Question(400, "Правильный ответ", "Название вопроса из категории, длинный вопрос в 2 строки для проверки межстрочного расстояния"));
 
         return questions;
     }
@@ -29,6 +29,9 @@ public class DBInfoProvider {
         answer.add(new Answer(7, "Неправильный ответ 2 на вопрос 3", 300));
         answer.add(new Answer(8, "Неправильный ответ 3 на вопрос 3", 300));
         answer.add(new Answer(9, "Неправильный ответ 4 на вопрос 3", 300));
+        answer.add(new Answer(10, "Мой ответ", 400));
+        answer.add(new Answer(11, "Вариант ответа 2, длинный, показывает поведение блока", 400));
+        answer.add(new Answer(12, "Ответ соперника", 400));
 
         return answer;
     }
